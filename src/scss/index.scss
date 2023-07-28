@@ -1,0 +1,58 @@
+@import "components/_main";
+@import "components/_navbar";
+@import "components/_sidebar";
+@import url('https://fonts.googleapis.com/css2?family=Karla&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Karla', sans-serif;
+    user-select: none;
+    scroll-behavior:smooth;
+}
+
+:root {
+    --background-dark: #222629;
+    --background-dark-two:#222629f2;
+    --font-dark: #EDF5E1;
+    --font-dark-two:#edf5e1a7;
+    --hover:rgba(255, 0, 0, 0.869);
+  
+
+    
+  }
+  
+  
+
+.app-container {
+    display: grid;
+    grid-template-columns: 1fr 6fr;
+    height: 100vh;
+
+    &-content-container {
+        height: inherit;
+        display: grid;
+        grid-template-rows: 1fr 8fr;
+
+    }
+
+    ::-webkit-scrollbar {
+        width: 0.5rem;
+        background-color: #F5F5F5;
+    }
+    ::-webkit-scrollbar-thumb{
+        background-color: #9191918f;
+        border-radius:1rem;
+      
+    }
+}
+
+
+
+@media screen and (max-width: 1024px){
+    .app-container {
+        grid-template-columns: 1fr;
+  
+    }
+ 
+}
